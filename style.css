@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&family=Sen&display=swap');
+*{
+  margin: 0;
+}
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.navbar{
+  font-family: 'Sen', sans-serif;
+  width: 100%;
+  height: 60px;
+  background-color: black;
+}
+.navbar-container{
+  display: flex;
+  align-items: center;
+  padding: 0 50px;
+  height: 100%;
+  color: #fff;
+}
+
+.logo-container{
+  flex: 1;
+}
+.logo{
+  color: rgb(42, 253, 52);
+}
+.menu-container{
+  flex: 6;
+}
+.menu-list{
+  display: flex;
+  list-style: none;
+}
+.menu-list-item{
+  margin-right: 30px;
+}
+.menu-list-item.active{
+  font-weight: bold;
+}
+
+.profile-container{
+  flex: 2;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.profile-picture{
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.profile-text-container{
+  margin: 0 20px;
+}
+.toggle{
+  width: 40px;
+  height: 20px;
+  background: #fff;
+  border-radius: 30px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+}
+.toggle-icon{
+  color: gold;
+}
+.toggle-ball{
+  width: 18px;
+  height: 18px;
+  background-color: #000;
+  position: absolute;
+  right: 1px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.1s ease all;
+}
+.sidebar{
+  display: flex;
+  flex-direction: column;
+  padding-top: 60px;
+  width: 50px;
+  height: 100%;
+  background-color: black;
+  position: fixed;
+  top: 0;
+  align-items: center;
+}
+
+.left-menu-icon{
+  color: #fff;
+  font-style: 20px;
+  margin-bottom: 40px;
+}
+
+.container{
+  background-color: #151515;
+  min-height: calc(100vh - 60px);
+  color: #fff;
+}
+.content-container{
+  margin-left: 50px;
+}
+.featured-content{
+  height: 50vh;
+  padding: 50px;
+}
+.featured-title{
+  width: 200px;
+}
+.featured-desc{
+  width: 500px;
+  color: lightgrey;
+  margin: 30px 0;
+}
+
+.featured-button{
+  background-color: rgb(42, 253, 52);
+  color: #fff;
+  padding: 10px 30px;
+  border-style: none;
+  border-radius: 10px;
+  outline: none;
+  font-weight: bold;
+}
+.movie-list{
+  display: flex;
+  height: 300px;
+  align-items: center;
+  transform: translatex(0);
+  transition: all 1s ease-in-out;
+}
+
+.movie-list-container{
+  padding: 0 20px;
+}
+.movie-list-wrapper{
+  position: relative;
+  overflow: hidden;
+}
+.movie-list-item{
+  margin-right: 30px;
+  position: relative;
+}
+.movie-list-item:hover .movie-list-item-img{
+  transform: scale(1.2);
+  margin: 0 30px;
+  opacity: 0.5;
+}
+.movie-list-item:hover .movie-list-item-title,
+.movie-list-item:hover .movie-list-item-desc,
+.movie-list-item:hover .movie-list-item-button{
+  opacity: 1;
+}
+.movie-list-item-img{
+  transition: all 1s ease-in-out;
+  width: 270px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.movie-list-item-title{
+  background-color: #333;
+  padding: 0 10px;
+  font-size: 32px;
+  font-weight: bold;
+  position: absolute;
+  top: 10%;
+  left: 50px;
+  opacity: 0;
+  transition: all 2s ease;
+}
+.movie-list-item-desc{
+  background-color: #333;
+  padding: 10px;
+  font-size: 14px;
+  position: absolute;
+  top: 30%;
+  left: 50px;
+  width: 230px;
+  opacity: 0;
+  transition: all 2s ease;
+}
+.movie-list-item-button{
+  background-color: rgb(42, 253, 52);
+  color: #fff;
+  padding: 10px;
+  border-style: none;
+  border-radius: 10px;
+  outline: none;
+  cursor: pointer;
+  position: absolute;
+  bottom: 20px;
+  left: 50px;
+  opacity: 0;
+  transition: all 2s ease;
+}
+.arrow{
+  font-size: 120px;
+  position: absolute;
+  top: 90px;
+  right: 1px;
+  color: lightgrey;
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.container.active{
+  background-color:#fff;
+}
+
+.movie-list-title.active{
+  color: #000;
+}
+
+
+.navbar-container.active{
+  background-color: #fff;
+  color: #000;
+}
+
+.sidebar.active{
+  background-color: #fff;
+}
+.left-menu-icon.active{
+  color: #000;
+}
+
+.toggle.active{
+  background-color: #000;
+}
+.toggle-ball.active{
+  background-color: #fff;
+  transform: translateX(-20px);
+}
+
+@media only screen and (max-width:940){
+  .menu-container{
+    display: none;
+  }
+
+
+
+
+
+
+
+}
